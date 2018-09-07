@@ -1,0 +1,7 @@
+grahamweldon.com {
+  proxy / {{#eachAlive bind.grahamweldon.members as |member| ~}}{{member.sys.ip}}:{{member.cfg.http-port}} {{/eachAlive ~}}{
+    transparent
+    policy round_robin
+  }
+}
+
